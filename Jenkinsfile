@@ -9,7 +9,7 @@ pipeline {
         }
         stage ('build next foo3') {
             steps {
-                build: 'test/foo3/main'
+                build job: 'test/foo3/main', propagate: false, wait: false
             }
         }
     }
