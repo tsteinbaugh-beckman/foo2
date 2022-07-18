@@ -5,6 +5,10 @@ pipeline {
         stage ('hello') {
             steps {
                 echo 'hello'
+                script {
+                    def causes = currentBuild.rawBuild.getCauses()
+                    echo causes
+                }
             }
         }
         stage ('upstream trigger?') {
