@@ -9,7 +9,7 @@ pipeline {
         }
         stage ('upstream trigger?') {
             when {
-                triggeredBy cause: 'UserIdCause'
+                triggeredBy upstreamCause: 'UserIdCause'
             }
             steps {
                 echo 'YAY!'
