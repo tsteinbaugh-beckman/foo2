@@ -12,7 +12,7 @@ pipeline {
                 script {
                     try {
                         build(
-                            job: "test/foo3/${env.BRANCH_NAME}", 
+                            job: "test/foo3/${param.originalFeatureBranch}", 
                             propagate: false, 
                             wait: false,
                             parameters: originalFeatureBranch = env.BRANCH_NAME)
